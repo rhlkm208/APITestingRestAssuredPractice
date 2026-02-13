@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProductResponse",
+  "type": "object",
+  "required": ["id", "name", "data"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique product identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "data": {
+      "type": "object",
+      "required": ["year", "price", "CPU model", "Hard disk size"],
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "Manufacturing year"
+        },
+        "price": {
+          "type": "number",
+          "description": "Product price"
+        },
+        "CPU model": {
+          "type": "string",
+          "description": "CPU model of the device"
+        },
+        "Hard disk size": {
+          "type": "string",
+          "description": "Hard disk capacity"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
