@@ -63,7 +63,6 @@ public class CompleteValidation {
 	    .auth().basic(userid, pwd)
 		.auth().preemptive().basic(userid, pwd)
 		.auth().oauth(ClientSecret, userid, accessToken, pwd)
-		.auth().oauth2(accessToken)
 		.auth().preemptive().basic(ClientID, ClientSecret)
 	    
 	   //Query Parameters (GET heavy usage)
@@ -90,10 +89,6 @@ public class CompleteValidation {
 
 
 
-
-
-     
-     
 		.when().get()
 		
 

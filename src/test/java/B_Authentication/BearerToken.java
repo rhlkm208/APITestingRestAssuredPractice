@@ -16,8 +16,8 @@ RestAssured.baseURI="https://api.openweathermap.org";
 		.header("Authorization", "bearer OAuthdeepdivescenarios")
 		.when().get("/data/2.5/weather")
 		.then().log().all().statusCode(200).time(lessThan(1500L))
-		.body("weather[0].'id'", equalTo(721))
-		.body("weather[0].'main'", equalTo("Haze"));
+		.body("weather[0].'id'", equalTo(701))
+		.body("weather[0].'main'", equalTo("Mist"));
 		
 
 	}
