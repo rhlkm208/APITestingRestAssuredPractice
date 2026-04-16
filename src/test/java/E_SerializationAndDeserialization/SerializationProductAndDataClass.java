@@ -1,12 +1,13 @@
 package E_SerializationAndDeserialization;
 
 import io.restassured.RestAssured;
+
 import static io.restassured.RestAssured.*;
 
 import F_SerializationAndDeserializationPOJO.POJOData;
 import F_SerializationAndDeserializationPOJO.POJOProductAndDataClass;
 
-public class ProductAndDataClass {
+public class SerializationProductAndDataClass {
 
 	public static void main(String[] args) {
 		
@@ -35,5 +36,4 @@ public class ProductAndDataClass {
 		.then().log().all();
 
 	}
-
 }

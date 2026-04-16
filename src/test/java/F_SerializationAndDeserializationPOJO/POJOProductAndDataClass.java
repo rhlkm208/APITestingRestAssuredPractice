@@ -1,5 +1,7 @@
 package F_SerializationAndDeserializationPOJO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class POJOProductAndDataClass {
 	
 	private String name;

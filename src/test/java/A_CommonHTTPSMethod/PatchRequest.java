@@ -8,7 +8,7 @@ public class PatchRequest {
 
 	public static void main(String[] args) {
 		
-		RestAssured.baseURI="https://api.restful-api.dev";
+	   RestAssured.baseURI="https://api.restful-api.dev";
 		
 		given()
 		.contentType("application/json")
@@ -22,7 +22,6 @@ public class PatchRequest {
 		.then().log().all()
 		.statusCode(200)
 		.body("name", equalTo("Apple MacBook Pro 16"));
-		
 		
 	}
 

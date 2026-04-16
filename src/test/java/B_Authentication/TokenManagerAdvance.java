@@ -1,7 +1,9 @@
-package TokenManagerPackage;
+package B_Authentication;
 
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
+
+import Utils.ConfigManager;
 
 public class TokenManagerAdvance {
 

@@ -1,4 +1,4 @@
-package TokenManagerPackage;
+package B_Authentication;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;

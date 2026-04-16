@@ -6,7 +6,7 @@ import F_SerializationAndDeserializationPOJO.POJOClassWithFakerLibrary;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
 
-public class ClassWithFakerLibrary {
+public class SerializationClassWithFakerLibrary {
 	
 	public static void main(String[] args) {
 	
@@ -30,6 +30,17 @@ public class ClassWithFakerLibrary {
 	.when().post("public/v2/users")
 	
 	.then().statusCode(201).log().all();
+	;
+	
+	given()
+	.header("Content-Type", "application/json")
+	.header("Accept", "Application/json" )
+	.header("Authorization", "Bearer 6b4cd8f2cadf05a8bb1b4487cd23b5ca45f0eebe1ffaa860aaa26b509ede5d8a")
+	.body(data)
+	
+	.when().get("public/v2/users/8429016")
+	
+	.then().statusCode(200).log().all();
 	;
 	
 	

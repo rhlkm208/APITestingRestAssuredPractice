@@ -1,6 +1,6 @@
 package F_SerializationAndDeserializationPOJO;
 
-public class POJOSerializationAndDeserialization {
+public class POJODeserialization {
 	
 	private String id;
 	private String title;

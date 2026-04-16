@@ -2,6 +2,7 @@ package A_CommonHTTPSMethod;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
@@ -22,11 +23,14 @@ public class EndToEndFlowAPITesting {
 				+ "   }\r\n"
 				+ "}")
 		.when().post("/objects")
-		.then().log().all().extract().response().asString();
+		.then().log().all().extract().asString();
+	
 	
 	JsonPath jpath = new JsonPath(CreatedProduct);
 	String productId = jpath.getString("id");
 	System.out.println(productId);
+	
+//	String productId = CreatedProduct.jsonPath().getString("id");
 	
 	
 	given()

@@ -11,17 +11,27 @@ import org.hamcrest.Matchers;
 
 public class responseSpecification {
 	public static ResponseSpecification responseSpec;
+	public static ResponseSpecification responseSpecnew;
 	
 	public void responseSpec() {
-		ResponseSpecBuilder resSpec = new ResponseSpecBuilder()
+     	ResponseSpecBuilder resSpec = new ResponseSpecBuilder()
 		.expectContentType("application/json")
 		.expectResponseTime(Matchers.lessThan(1500L))
 		.expectStatusCode(200);
 		
-		responseSpec = resSpec.build();
+		responseSpec = resSpec.build();		
 		
 		
 	}
+	
+	// Another Way to write responseSpec
+	public void responseSpecNew() {
+		responseSpecnew =new ResponseSpecBuilder()
+		.expectContentType("application/json")
+		.expectResponseTime(Matchers.lessThan(1500L))
+		.expectStatusCode(200).build();
+	}
+	
 	
 
 	public static void main(String[] args) {

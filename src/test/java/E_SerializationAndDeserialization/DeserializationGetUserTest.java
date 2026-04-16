@@ -9,7 +9,7 @@ import F_SerializationAndDeserializationPOJO.POJOGetUserTest;
 
 import static io.restassured.RestAssured.given;
 
-public class GetUserTest {
+public class DeserializationGetUserTest {
 
     @Test
     public void getUserAndValidateName() {

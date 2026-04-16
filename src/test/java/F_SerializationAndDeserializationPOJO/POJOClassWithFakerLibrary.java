@@ -6,6 +6,8 @@ public class POJOClassWithFakerLibrary {
 	private String gender;
 	private String email;
 	private String status;
+	
+	
 	public String getName() {
 		return name;
 	}
